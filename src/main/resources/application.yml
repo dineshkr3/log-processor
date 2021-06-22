@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:hsqldb:file:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+    driver-class-name: "org.hsqldb.jdbcDriver"
+  jpa:
+    hibernate:
+      ddl-auto: create
+      show-sql: false
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+
+
+logging:
+  level:
+    root: ERROR
+    com.test: INFO
+
+threshold:
+  alert: 4
